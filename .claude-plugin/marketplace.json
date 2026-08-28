@@ -1,0 +1,10 @@
+{
+  "name": "preflight",
+  "owner": { "name": "Niklas Puller" },
+  "metadata": {
+    "description": "Reusable AI-agent standards, personas, and workflows as a project starter kit."
+  },
+  "plugins": [
+    { "name": "preflight", "source": "./plugin" }
+  ]
+}

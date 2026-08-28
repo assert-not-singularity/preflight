@@ -1,0 +1,15 @@
+{
+  "comment": "Menu of scaffoldable components, shared by the setup and update commands. src is relative to ${CLAUDE_PLUGIN_ROOT}; dest is relative to the project root. group drives the checkbox grouping; recommendWhen is a heuristic for pre-recommending.",
+  "components": [
+    { "key": "working-style", "group": "Standards & rules", "label": "Working style (always-on)", "recommend": "always", "src": "templates/standards/working-style.md", "dest": ".claude/standards/working-style.md" },
+    { "key": "python", "group": "Standards & rules", "label": "Python standards", "recommendWhen": "repo contains *.py or pyproject.toml", "src": "templates/rules/python.md", "dest": ".claude/rules/python.md" },
+    { "key": "scalable-architecture", "group": "Standards & rules", "label": "Scalable architecture — ports & adapters, DI (opt-in)", "note": "patterns for services/pipelines/larger apps; skip for scripts, libraries, or framework apps", "src": "templates/rules/scalable-architecture.md", "dest": ".claude/rules/scalable-architecture.md" },
+    { "key": "prose-and-docs", "group": "Standards & rules", "label": "Prose & docs standards", "recommend": "default", "src": "templates/rules/prose-and-docs.md", "dest": ".claude/rules/prose-and-docs.md" },
+    { "key": "git-conventions", "group": "Workflows", "label": "Git conventions (skill)", "recommendWhen": "repo is a git repo", "src": "templates/skills/git-conventions", "dest": ".claude/skills/git-conventions" },
+    { "key": "subagent-orchestration", "group": "Workflows", "label": "Subagent orchestration (skill)", "recommend": "default", "src": "templates/skills/subagent-orchestration", "dest": ".claude/skills/subagent-orchestration" },
+    { "key": "technical-writer", "group": "Personas", "label": "technical-writer", "src": "templates/agents/technical-writer.md", "dest": ".claude/agents/technical-writer.md" },
+    { "key": "lean-implementer", "group": "Personas", "label": "lean-implementer", "recommend": "default", "src": "templates/agents/lean-implementer.md", "dest": ".claude/agents/lean-implementer.md" },
+    { "key": "janitor", "group": "Personas", "label": "janitor", "src": "templates/agents/janitor.md", "dest": ".claude/agents/janitor.md" },
+    { "key": "web-researcher", "group": "Personas", "label": "web-researcher (opt-in)", "src": "templates/agents/web-researcher.md", "dest": ".claude/agents/web-researcher.md" }
+  ]
+}
