@@ -11,7 +11,7 @@ Everything is branched so it loads only when it is relevant, keeping context lea
 
 | Loaded | What | Where it lands |
 |---|---|---|
-| **Always-on** | `working-style` — propose-before-implementing, a question isn't a work order, report honestly, flag reusable logic | `.claude/standards/`, imported by `CLAUDE.md` |
+| **Always-on** | `working-style` — propose-before-implementing, a question isn't a work order, report honestly, flag reusable logic, scope discipline & the simplest solution | `.claude/standards/`, imported by `CLAUDE.md` |
 | **When editing `*.py`** | `python` — 3.13+, type hints, PEP 695, `uv`, structured logging, definition ordering, suppression discipline, async safety | `.claude/rules/` |
 | **When editing `*.py`** (opt-in) | `scalable-architecture` — ports-and-adapters, dependency injection, boundary validation, idempotent writes; patterns for services/larger apps | `.claude/rules/` |
 | **When editing `*.md`** | `prose-and-docs` — no historical narration, verify before documenting, voice, ordering, RFC-2119 & leanness | `.claude/rules/` |

@@ -1,5 +1,5 @@
 {
   "name": "preflight",
   "description": "Starter kit of reusable AI-agent standards, personas, and workflows. Run /preflight:setup to scaffold editable copies into a project.",
-  "version": "0.1.0"
+  "version": "0.2.0"
 }

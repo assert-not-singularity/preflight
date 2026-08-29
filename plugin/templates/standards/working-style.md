@@ -16,6 +16,25 @@ These apply to every task. They are deliberately short — this file is always i
 - **Flag reusable logic.** When generic utility code (transforms, math helpers, shared parsing) is
   buried as a private method in one module, raise it: propose extracting it to a shared location
   so there is one source of truth.
+- **Prefer the simplest solution.** Backward-compatibility shims, dead code paths, and versioning
+  that nothing depends on are maintenance cost, not safety — don't add them. Keep compatibility only
+  where a real consumer relies on it: a versioned or published API, an SLA, a production pipeline, or
+  a persisted data format with outside callers. When it is genuinely unclear whether something still
+  depends on the old behaviour, ask instead of defensively keeping both paths.
+- **Solve the specific ask, not its generalization.** When a task names a concrete need, implement
+  exactly that; don't build the generalized version — every case handled, exposed everywhere —
+  until a second concrete caller exists. A seam at an I/O boundary for testability or genuine
+  swappability is a present need, not speculative generality — the `scalable-architecture` rule
+  governs that call where a project follows it.
+- **Don't re-derive what the input already states.** Before writing code to compute, select, or
+  reconstruct a value, check whether the source data already states it authoritatively — if it does,
+  read and apply it rather than adding a second source of truth that can drift.
+- **Name the defect in one sentence, then make that sentence false.** Write the current wrong
+  behaviour as one sentence and let the smallest change that falsifies it bound the fix — "stop
+  discarding the table" stays small where "add X support" invites machinery.
+- **Justify each touched file against the requirement, not architectural symmetry.** Mirror the
+  shape of existing patterns, not their breadth — that one feature spans a frame, a schema, meta, and
+  inventory usage does not mean a related change must touch all four.
 - **Confirm destructive or outward-facing actions** unless already authorized. Before deleting or
   overwriting something you did not create, look at it first; if it contradicts how it was
   described, surface that instead of proceeding.
