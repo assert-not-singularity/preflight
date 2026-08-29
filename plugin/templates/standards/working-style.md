@@ -16,6 +16,12 @@ These apply to every task. They are deliberately short — this file is always i
 - **Flag reusable logic.** When generic utility code (transforms, math helpers, shared parsing) is
   buried as a private method in one module, raise it: propose extracting it to a shared location
   so there is one source of truth.
+- **Prefer the simplest solution.** Solve the problem in front of you, not a hypothetical future
+  one. Do NOT preserve backward compatibility, keep dead code paths, or add versioning that nothing
+  depends on — unused compatibility is maintenance cost, not safety. Keep it only where a real
+  consumer relies on it: a versioned or published API, an SLA, a production pipeline, or a persisted
+  data format with outside callers. When it is genuinely unclear whether something depends on the
+  old behaviour, ask instead of defensively keeping both paths.
 - **Confirm destructive or outward-facing actions** unless already authorized. Before deleting or
   overwriting something you did not create, look at it first; if it contradicts how it was
   described, surface that instead of proceeding.
