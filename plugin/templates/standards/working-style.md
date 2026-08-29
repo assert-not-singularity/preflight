@@ -22,8 +22,10 @@ These apply to every task. They are deliberately short — this file is always i
   a persisted data format with outside callers. When it is genuinely unclear whether something still
   depends on the old behaviour, ask instead of defensively keeping both paths.
 - **Solve the specific ask, not its generalization.** When a task names a concrete need, implement
-  exactly that; MUST NOT build the generalized version — every case handled, exposed everywhere —
-  until a second concrete caller exists.
+  exactly that; don't build the generalized version — every case handled, exposed everywhere —
+  until a second concrete caller exists. A seam at an I/O boundary for testability or genuine
+  swappability is a present need, not speculative generality — the `scalable-architecture` rule
+  governs that call where a project follows it.
 - **Don't re-derive what the input already states.** Before writing code to compute, select, or
   reconstruct a value, check whether the source data already states it authoritatively — if it does,
   read and apply it rather than adding a second source of truth that can drift.
