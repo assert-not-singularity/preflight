@@ -39,4 +39,6 @@ These apply to every task. They are deliberately short — this file is always i
   overwriting something you did not create, look at it first; if it contradicts how it was
   described, surface that instead of proceeding.
 - **Never hardcode or commit secrets.** Credentials, API keys, and tokens come from environment
-  variables or a secret manager — never committed, never pasted into code or logs.
+  variables, a secret manager, or an explicitly documented local file with permissions
+  restricted to the owner (e.g. mode `0600`) — never committed, never pasted into code or logs,
+  never readable by anyone but the owning user.
