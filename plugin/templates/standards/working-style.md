@@ -13,6 +13,14 @@ These apply to every task. They are deliberately short — this file is always i
   when tests fail (with the output), when a step was skipped, and what you did *not* verify. An
   accurate "still broken" beats a false green; when something is done and verified, say so plainly
   without hedging.
+- **Size the change, then read before designing.** First work out whether it stays in one file or
+  spans several. Single-file: read that file's current structure — its functions/exports, or a
+  class's methods and fields — before writing anything; look for logic that should be extracted
+  into a shared function, or where the new piece actually belongs, rather than bolting it onto the
+  end. Multi-file: do that same read per file, then step back and look at how the surrounding
+  package/module already divides responsibility, so the change lands where that responsibility
+  already lives. Don't discover the shared shape by writing the same small check at each call site
+  as you reach it — survey first, design once.
 - **Flag reusable logic.** When generic utility code (transforms, math helpers, shared parsing) is
   buried as a private method in one module, raise it: propose extracting it to a shared location
   so there is one source of truth.
