@@ -19,9 +19,9 @@ copy** — the project owns it afterward.
 
 3. **Ask what to install, as checkboxes.** Use AskUserQuestion with `multiSelect: true`, one
    question per `group` in the menu (`Personas`, `Standards & rules`, `Workflows`). Mark
-   recommended items "(Recommended)" in the label. `working-style` is always installed — state
-   that rather than offering it as opt-out. Skip a group entirely if the repo clearly has no use
-   for it.
+   recommended items "(Recommended)" in the label. `working-style` and `communication` are always
+   installed — state that rather than offering them as opt-out. Skip a group entirely if the repo
+   clearly has no use for it.
 
 4. **Copy only the selected components** (never overwrite an existing file — this is a starter,
    not a sync). For each selected component, copy `src` → `dest`; for directories use `cp -Rn`.
@@ -34,8 +34,9 @@ copy** — the project owns it afterward.
 
 6. **Wire the root `CLAUDE.md`** (do NOT clobber):
    - No `CLAUDE.md` → copy `${CLAUDE_PLUGIN_ROOT}/templates/CLAUDE.md` to the repo root.
-   - Exists → keep it; ensure it imports `@.claude/standards/working-style.md` under an
-     "Always-on standards" heading, adding the line only if missing.
+   - Exists → keep it; ensure it imports both `@.claude/standards/working-style.md` and
+     `@.claude/standards/communication.md` under an "Always-on standards" heading, with the
+     which-applies cue from the template's version of that section, adding only what is missing.
 
 7. **Fill placeholders.** Ask the user for the one-line project purpose (and module-map /
    domain-term pointers if known) and replace the `{{…}}` placeholders. Leave them if unknown.

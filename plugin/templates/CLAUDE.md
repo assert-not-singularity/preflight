@@ -9,7 +9,13 @@ needs it and cannot derive it from the code or the docs.
 
 ## Always-on standards
 
+Both standards can apply to the same task: use `working-style` for code changes and `communication` whenever you write to the user.
+
+Changing the code (editing, committing, verifying):
 @.claude/standards/working-style.md
+
+Talking to the user (answering a question, or asking for a decision):
+@.claude/standards/communication.md
 
 ## Orient yourself
 
