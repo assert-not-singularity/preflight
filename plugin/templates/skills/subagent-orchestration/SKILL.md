@@ -9,6 +9,15 @@ description: >
 
 # Subagent & orchestration guidelines
 
+## Don't delegate what a command answers
+
+Before spawning anything, ask whether a grep, one shell command, or reading one file answers it.
+If so, do that — a subagent costs its whole tool baseline plus a briefing, to return what a
+single call would have. Delegate for a reason you can name: output you won't need in your own
+context again, independent work that genuinely runs in parallel, or a fresh perspective on
+something you've already formed an opinion about. Checking a claim against a handful of PRs or
+issues is a lookup, not a fleet.
+
 ## Right-size the model and effort
 
 Default to a **mid-tier model at medium effort**. Escalate to a larger model or higher effort only
@@ -28,6 +37,11 @@ tokens per agent" — token cost is a real constraint.
 
 Model names change — pick by capability tier, not version. When unsure, start at mid and escalate
 only with a stated reason.
+
+Set the model explicitly on every spawn. A spawn with no model inherits its parent's, and a nested
+spawn inherits that again — so one top-tier orchestrator silently makes its entire subtree
+top-tier, including the mechanical lookups. Most of an over-spent fleet is usually spawned by
+other subagents, not by you.
 
 ## Restrict each subagent's tools
 
