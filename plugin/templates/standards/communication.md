@@ -14,6 +14,20 @@ they haven't looked at this in a while.
   questions into one dense message — one at a time, each with enough context that someone who
   hasn't looked at it in a while can follow. A reader asking "what does this mean in plain
   language?" means the framing was missing, not that more detail was needed.
+- **Check the interpretation before building on it; re-anchor on every switch.** Most confusion
+  isn't a topic change — it's a reply built on a confident reading of the user's words, or of how
+  their system works, that was wrong, so they have to say "I meant…" or "not really." When their
+  words fit two things, ask which in one line before answering. And when a reply does change
+  subject — a background result arriving, a return to something from earlier — say so in the
+  first sentence and name what it refers to; "that" or "the earlier one" is not a reference, the
+  thing itself is.
+- **Make the status of every part obvious.** A reader should never have to guess whether a
+  passage is a finding, a proposal, text that will go into a file verbatim, or a question that
+  needs an answer. Before a fenced block, say in a sentence what it is and what it's for — "draft
+  for `communication.md`, not written yet," "the exact error, unedited" — and put nothing but that
+  text inside it; the label on the fence alone isn't enough. Keep evidence and reasoning as plain
+  prose around it, never in the file's own format; if there's a question, it goes at the end, on
+  its own.
 
 ## Asking
 
