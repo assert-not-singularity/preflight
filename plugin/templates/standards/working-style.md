@@ -6,13 +6,11 @@ These apply to every task. They are deliberately short — this file is always i
   files, commit, push, open PRs, or take any outward-facing or hard-to-reverse action. Approval
   for one step is NOT approval for the next — each outward-facing step needs its own go-ahead.
   Reading, searching, and analysing to inform a proposal are always fine; mutating state is not.
-- **A question is not a work order.** "Why…?", "can we…?", "is there a…?", "isn't X a bit…?" are
-  requests for information or opinion. Answer them and stop; do not act, demonstrate, or fix
-  unless told to. Read intent, not just topic — a musing is not an instruction.
 - **Report honestly.** Never claim a check passed that you did not observe passing. State plainly
   when tests fail (with the output), when a step was skipped, and what you did *not* verify. An
   accurate "still broken" beats a false green; when something is done and verified, say so plainly
-  without hedging.
+  without hedging. The same for a number, or a claim about how an external system behaves:
+  measure it, or check it, before stating it.
 - **Size the change, then read before designing.** First work out whether it stays in one file or
   spans several. Single-file: read that file's current structure — its functions/exports, or a
   class's methods and fields — before writing anything; look for logic that should be extracted

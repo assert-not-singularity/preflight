@@ -11,7 +11,8 @@ Everything is branched so it loads only when it is relevant, keeping context lea
 
 | Loaded | What | Where it lands |
 |---|---|---|
-| **Always-on** | `working-style` — propose-before-implementing, a question isn't a work order, report honestly, size the change before designing, flag reusable logic, scope discipline & the simplest solution | `.claude/standards/`, imported by `CLAUDE.md` |
+| **Always-on** (changing the code) | `working-style` — propose-before-implementing, report honestly, size the change before designing, flag reusable logic, scope discipline & the simplest solution | `.claude/standards/`, imported by `CLAUDE.md` |
+| **Always-on** (talking to the user) | `communication` — a question isn't a work order, gist first, orient before asking, interview not ratification, don't make the user's calls, name the options mid-implementation | `.claude/standards/`, imported by `CLAUDE.md` |
 | **When editing `*.py`** | `python` — 3.13+, type hints, PEP 695, `uv`, structured logging, definition ordering, suppression discipline, async safety | `.claude/rules/` |
 | **When editing `*.py`** (opt-in) | `scalable-architecture` — ports-and-adapters, dependency injection, boundary validation, idempotent writes; patterns for services/larger apps | `.claude/rules/` |
 | **When editing `*.md`** | `prose-and-docs` — no historical narration, verify before documenting, voice, ordering, RFC-2119 & leanness | `.claude/rules/` |
@@ -78,7 +79,8 @@ preflight/
 │     ├─ agents/                        # personas
 │     ├─ rules/                         # file-scoped (paths: globs)
 │     ├─ skills/                        # task-triggered
-│     ├─ standards/working-style.md     # always-on
+│     ├─ standards/working-style.md     # always-on, changing the code
+│     ├─ standards/communication.md     # always-on, talking to the user
 │     └─ CLAUDE.md                      # thin project index skeleton
 └─ README.md
 ```
