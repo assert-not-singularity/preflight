@@ -9,8 +9,7 @@ needs it and cannot derive it from the code or the docs.
 
 ## Always-on standards
 
-Which one applies depends on what you're doing right now — changing the code, or talking to the
-user.
+Both standards can apply to the same task: use `working-style` for code changes and `communication` whenever you write to the user.
 
 Changing the code (editing, committing, verifying):
 @.claude/standards/working-style.md
