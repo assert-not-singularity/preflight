@@ -50,6 +50,11 @@ read price). A file-editing agent that never calls Slack / Jira / cloud / browse
 load their schemas — give it a minimal tool list. This cuts the per-spawn baseline from ~100K+
 tokens to a fraction, every spawn.
 
+The default is the failure: a spawn that names no tool list inherits every tool the parent has,
+MCP servers included, so restriction has to be explicit on every spawn. Name the few tools the
+task needs — a web-research agent needs fetch and search, not a GitHub or Slack MCP — and give it
+nothing else.
+
 ## Brief each subagent to stand alone
 
 A subagent starts fresh and its final report is **not** shown to the user. So:
